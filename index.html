@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>¡Bienvenido al Juego de Batallas!</h1>
+    <div id="main-interface">
+        <div id="player-side">
+            <!-- Avatar del personaje -->
+            <div id="avatar-container">
+                <img id="character-avatar" src="images/warrior.png" alt="Avatar del personaje" />
+            </div>
+            <!-- Atributos del jugador -->
+            <div id="player-attributes">
+                <p><strong>Nombre:</strong> <span id="char-name">Bruto</span></p>
+                <p><strong>Vida:</strong> <span id="char-health">100</span></p>
+                <p><strong>Fuerza:</strong> <span id="char-strength">10</span></p>
+                <p><strong>Velocidad:</strong> <span id="char-speed">5</span></p>
+                <p><strong>Agilidad:</strong> <span id="char-agility">3</span></p>
+                <p><strong>Nivel:</strong> <span id="char-level">1</span></p>
+                <p><strong>Experiencia:</strong> <span id="char-experience">0</span></p>
+            </div>
+            <!-- Contenedor de mascotas del jugador -->
+            <div id="pets-container">
+                <h3>Tus Mascotas</h3>
+                <div id="pet-icons">
+                    <!-- Aquí se agregarán dinámicamente los iconos de las mascotas -->
+                </div>
+                <div id="pet-details" style="display: none;">
+                    <h4>Detalles de la Mascota</h4>
+                    <img id="pet-avatar" src="" alt="Avatar de la mascota" />
+                    <p><strong>Nombre:</strong> <span id="pet-name"></span></p>
+                    <p><strong>Vida:</strong> <span id="pet-health"></span></p>
+                    <p><strong>Fuerza:</strong> <span id="pet-strength"></span></p>
+                    <p><strong>Velocidad:</strong> <span id="pet-speed"></span></p>
+                    <p><strong>Agilidad:</strong> <span id="pet-agility"></span></p>
+                    <p><strong>Nivel:</strong> <span id="pet-level"></span></p>
+                    <ul id="abilities-list">
+                        <!-- Aquí se mostrarán las habilidades al hacer clic en un icono -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="actions-side">
+            <!-- Botón de entrenar -->
+            <button id="train-button">Entrenar</button>
+            <div id="training-result">
+                <div id="result-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interfaz de selección de mazmorra -->
+    <div id="dungeon-selection" style="display: none;">
+        <h2>Selecciona una Mazmorra</h2>
+        <button id="dungeon-button">Mazmorras</button>
+        <button id="pet-dungeon-button">Mazmorra de Mascotas</button>
+    </div>
+
+    <!-- Interfaz de selección de enemigo -->
+    <div id="enemy-selection" style="display: none;">
+        <h2>Selecciona un Enemigo</h2>
+        <select id="enemy-list">
+            <!-- Aquí se agregarán dinámicamente los enemigos -->
+        </select>
+        <button id="fight-button">Pelear</button>
+        <button id="back-to-dungeon-selection">Volver</button>
+    </div>
+
+    <!-- Interfaz de combate -->
+    <div id="battle-interface" style="display: none;">
+        <div id="battle-container">
+            <div id="player-container">
+                <img id="character-avatar" src="images/warrior.png" alt="Avatar del personaje" />
+                <p id="player-health">Salud: 100</p>
+            </div>
+            <div id="enemy-container">
+                <img id="enemy-avatar" src="" alt="Avatar del enemigo" />
+                <p id="enemy-health">Salud: 60 </p>
+            </div>
+        </div>
+        <div id="battle-log">
+            <!-- Aquí se mostrarán los resultados del combate -->
+        </div>
+        <button id="home-button">Inicio</button>
+        <button id="fight-again-button">Pelear de Nuevo</button>
+        <button id="back-to-enemy-selection">Volver</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
